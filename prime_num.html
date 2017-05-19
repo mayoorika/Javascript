@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p>
+    <form action="/action_page.php">
+Enter The Number: <input type="text" name="FirstName" value="Enter the number"><br>
+<input type="submit" value="Submit">
+</form>
+
+<p id="demo"></p>
+
+<script>
+function checkPrime(input){
+if (input == 1) {
+alert(input + " is not a prime number.");
+return;
+}
+for (var i = 2; i < input; i++) {
+if (input % i == 0){
+gotOne(input);
+return;
+function gotOne(number){
+var divisors = [];
+for (var b = 2; b < number; b++) {
+if (input % b == 0) {
+if (divisors.length == 0) {
+divisors.push(b);
+} else {
+divisors.push(" " + b);
+}
+}
+}
+alert(input + " is not a prime number. It is divisible by (" + divisors + ").");
+return;
+}
+}
+}
+alert (input + " is a prime number.");
+}
+
+checkPrime(27);
+
+
+    window.alert(input)
+</script>
+
+</body>
+</html>
